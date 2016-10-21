@@ -1,0 +1,10 @@
+<project name="gtz" default="compilation">
+<echo message="running gtz application"/>
+<target name="compilation">
+<mkdir dir="classes"/>
+<javac srcdir="src" destdir="classes"/>
+</target>
+<target name="create_jar" depends="compilation">
+<jar basedir="classes" destfile="gtz_db.jar"/>
+</target>
+</project>
